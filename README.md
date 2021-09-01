@@ -17,10 +17,19 @@ Quick proof of concept for my boi @codyb and all the cryptokeepers at [Definitel
 
 ## Vamanoooooooooooooos
 
+Checkout this repo and install dependencies
+
 ```
-npx hardhat clean # remove old artifacts
-npx hardhat compile # make new artifacts
-npx hardhat run scripts/deploy.js # deploys to ephemeral `hardhat` network
+git clone https://github.com/jamiew/loot-fork
+cd loot-fork
+npm install
+```
+
+compile the contract and deploy to the internal `hardhat` network
+
+```
+npx hardhat compile
+npx hardhat run scripts/deploy.js
 ```
 
 ## Here's the next level
