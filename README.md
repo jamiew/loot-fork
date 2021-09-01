@@ -44,7 +44,7 @@ npx hardhat node --show-stack-traces
 npx hardhat run --network localhost scripts/deploy.js
 ```
 
-# then start `npx hardhat console` and you can interact with said contract
+then start `npx hardhat console` and you can interact with said contract
 
 ```shell
 npx hardhat console --network localhost
