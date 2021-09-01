@@ -34,7 +34,7 @@ npx hardhat run scripts/deploy.js
 
 ## Here's the next level
 
-a real example requires you to run a local Ganache blockchain simulator (AKA the `localhost` network):
+a real example requires you to run a local Ganache blockchain simulator (AKA the `localhost` network, chainId `31337`):
 
 ```shell
 # in one terminal, run a lil blockchain
@@ -68,16 +68,16 @@ then let's call some contract methods:
 // (because we haven't minted anything yet)
 
 (await contract.getWeapon(1)).toString();
-'"Grim Shout" Grave Wand of Skill +1'
+// '"Grim Shout" Grave Wand of Skill +1'
 ```
 
 if you want some loots, mint them to one of the default accounts setup by `hardhat node` (ganache). they cryptorich, they got like 10k ETH each
 
 ```javascript
 let tokenId = 1;
-const account = (await ethers.getSigners())[0];
-const txn = (await contract.connect(account).claim(tokenId));
-const receipt = (await txn.wait());
+let account = (await ethers.getSigners())[0];
+let txn = (await contract.connect(account).claim(tokenId));
+let receipt = (await txn.wait());
 console.log(receipt.events[0].args)
 /*
 [
