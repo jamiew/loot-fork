@@ -8,11 +8,9 @@ Quick proof of concept for my boi @codyb and all the cryptokeepers at [Definitel
 
 3. Then a healthy dose of `npx hardhat` boilerplate (Advanced Example) which is A Pretty Great Way To Write Solidity
 
-4. But with `scripts/deploy.js` updated to work with `LootFork`
+4. And then this brilliant README
 
-5. And then this brilliant README
-
-6. Good luck, we're all counting on you
+5. Good luck, we're all counting on you
 
 
 ## Vamanoooooooooooooos
@@ -104,50 +102,30 @@ congratulations jeffrey bezos u did it
 
 ## put that bad boy on mainnet and get lootrich
 
-or maybe start with rinkeby or kovan or goooooerli
+or perhaps start with rinkeby, my favorite testnet
 
-This largely requires funding a wallet and editing `hardhat.config.js` and `.env` with the relevant provider and wallet configuration. This is left as an exercise to the reader
+This largely requires funding a wallet and registering API keys with [Alchemy](https://docs.alchemy.com/alchemy/introduction/getting-started) and [Etherscan]()
 
+Copy `.env.sample` to `.env` and edit in your keys
 
-## Here's the README from Advanced Sample Hardhat Project which is pretty great too
-
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
-
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
-
-Try running some of the following tasks:
+Then:
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.js
-node scripts/deploy.js
-npx eslint '**/*.js'
-npx eslint '**/*.js' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
+npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-## Etherscan verification
+you can interact with this contract via `npx hardhat console` the same way as above, just substitute `--network rinkeby` for `--network localhost`
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+You can also use the `hardhat-etherscan-verify` plugin to verify the contract on Etherscan, which is required to be truly eleet
 
-In this project, copy the .env.template file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/deploy.js
+```
+npx hardhat verify --network rinkeby <YOUR_CONTRACT_ADDRESS>
 ```
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+Substitute `mainnet` for `rinkeby` to deploy for realsies. good luck
 
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+
+# more reading
+
+* [Hardhat docs](https://hardhat.org/getting-started/)
+* [OpenZeppelin docs](https://docs.openzeppelin.com/openzeppelin/)
