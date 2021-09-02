@@ -12,6 +12,8 @@ Quick proof of concept for my boi @codyb and all the cryptokeepers at [Definitel
 
 5. Good luck, we're all counting on you
 
+![Speed Project Approved: 1 Hour](http://fffff.at/files/2009/09/speedproject-approved-stamp-1h.gif)
+
 
 ## Vamanoooooooooooooos
 
@@ -52,7 +54,7 @@ in the console, connect to our newly deployed `LootFork`:
 
 ```javascript
 const Contract = await ethers.getContractFactory('LootFork');
-const contract = await Contract.attach("ADDRESS_FROM_DEPLOYMENT_GOES_HERE_:)");
+const contract = await Contract.attach("ADDRESS_FROM_DEPLOYMENT_GOES_HERE");
 ```
 
 then let's call some contract methods:
