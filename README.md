@@ -1,8 +1,8 @@
 # Loot (for Forkers)
 
-Quick proof of concept for my boi @codyb and all the cryptokeepers at [Definitely Friends](https://definitely.shop)
+Quick proof of concept for my boi [@codyb](https://twitter.com/codybrown) and all the cryptokeepers at [Definitely Crypto](https://defdao.xyz)
 
-1. It's @dhof's beautiful little [LOOT contract](https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7#code)
+1. It's [@dhof](https://twitter.com/dhof/)'s beautiful little [LOOT contract](https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7#code)
 
 2. But with the flattened [OpenZeppelin contracts](https://openzeppelin.com/contracts/) extracted back into their original `imports`, for cleanliness
 
